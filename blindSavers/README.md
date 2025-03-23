@@ -1,10 +1,19 @@
-nvm
-node 설치: v22.11.0
-ruby 설치: v3.2.2
-CocoaPods 설치: v1.16.2
-watchman 설치: 2025.03.10.00
+# 초기 설치 환경입니다요
+```sh
+react-native: v0.78.1
+참고문서: https://reactnative.dev/blog/2025/02/19/react-native-0.78
+
+node: v22.11.0
+ruby: v3.2.2
+CocoaPods: v1.16.2
+watchman 2025.03.10.00
 xcode:
-jdk:
+jdk: javac 17.0.14
+AndroidStudio SDK: Android 15.0("VanillaiceCream" API Level 35)
+
+test simulator
+ios: iPhone 16, ios v18
+```
 
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
