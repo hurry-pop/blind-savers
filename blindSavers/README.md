@@ -15,6 +15,21 @@ test simulator
 ios: iPhone 16, ios v18
 ```
 
+# src 초기 구조
+```sh
+     src/
+     ├── components/     # 재사용 가능한 UI 컴포넌트
+     ├── screens/       # 화면 컴포넌트
+     ├── navigation/    # 네비게이션 관련 설정
+     ├── services/      # API 호출 등 외부 서비스
+     ├── utils/         # 유틸리티 함수
+     ├── hooks/         # 커스텀 훅
+     ├── assets/        # 이미지, 폰트 등
+     └── styles/        # 전역 스타일
+
+
+pnpm install 진행 바람!
+```
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 

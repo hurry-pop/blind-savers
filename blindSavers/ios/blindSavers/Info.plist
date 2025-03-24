@@ -32,6 +32,8 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>앱이 카메라에 접근하려 합니다. 사진을 촬영하려면 카메라 접근을 허용하세요.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
