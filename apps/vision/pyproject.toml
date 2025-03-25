@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "vision"
+version = "0.1.0"
+description = "Computer Vision Project for BlindSavers"
+authors = ["Your Name"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch = "^2.0.0"
+torchvision = "^0.15.0"
+opencv-python = "^4.7.0"
+numpy = "^1.24.0"
+pillow = "^9.5.0"
+pyyaml = "^6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.3.1"
+jupyter = "^1.0.0" 

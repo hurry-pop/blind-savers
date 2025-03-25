@@ -1,0 +1,15 @@
+{
+  "name": "blindsavers",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "mobile:ios": "pnpm --filter blindSavers ios",
+    "mobile:android": "pnpm --filter blindSavers android",
+    "mobile:start": "pnpm --filter blindSavers start"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.0"
+  }
+} 
