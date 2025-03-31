@@ -1,12 +1,61 @@
+# 기본 설정
+project_name: "blind-savers-vision"
+version: "0.1.0"
+
+# 데이터 설정
+data:
+  train_dir: "data/train"
+  val_dir: "data/val"
+  test_dir: "data/test"
+  img_size: [224, 224]
+  num_classes: 10
+  class_names: ["normal_path", "tactile_paving", "obstacle", "stairs", "crosswalk", "door", "elevator", "sign", "danger", "other"]
+
+# 모델 설정
+model:
+  type: "efficientnet"  # 'custom', 'mobilenet', 'efficientnet', 'yolo'
+  pretrained: true
+  freeze_backbone: true
+  dropout_rate: 0.2
+
+# 학습 설정
 training:
   batch_size: 32
+  epochs: 50
   learning_rate: 0.001
-  epochs: 100
+  weight_decay: 0.0001
+  early_stopping_patience: 10
+  scheduler_step_size: 7
+  scheduler_gamma: 0.1
+  num_workers: 4
 
-data:
-  data_dir: "data/raw"
-  train_split: 0.8
+# 증강 설정
+augmentation:
+  use_augmentation: true
+  rotation_range: 20
+  brightness_range: [0.8, 1.2]
+  flip_horizontal: true
+  flip_vertical: false
+  zoom_range: [0.8, 1.2]
+  random_crop: true
 
-model:
-  name: "vision_model"
-  save_dir: "checkpoints"
+# 평가 설정
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1"]
+  confusion_matrix: true
+  save_best_only: true
+  checkpoint_dir: "checkpoints"
+
+# 추론 설정
+inference:
+  confidence_threshold: 0.5
+  nms_threshold: 0.4
+  model_path: "checkpoints/best_model.pth"
+  real_time: true
+  device: "cpu"  # 'cpu' 또는 'cuda'
+
+# 로깅 설정
+logging:
+  log_dir: "logs"
+  tensorboard: true
+  log_interval: 10

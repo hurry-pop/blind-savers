@@ -17,7 +17,7 @@ ios: iPhone 16, ios v18
 
 # src 초기 구조
 ```sh
-     src/
+     test/
      ├── components/     # 재사용 가능한 UI 컴포넌트
      ├── screens/       # 화면 컴포넌트
      ├── navigation/    # 네비게이션 관련 설정
