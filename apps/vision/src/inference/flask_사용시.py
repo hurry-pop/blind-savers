@@ -5,8 +5,8 @@ import os
 sys.path.append(
   os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from models.model import VisionModel
-from utils.preprocessing import get_transform, preprocess_for_inference
+from ..models.model import VisionModel
+from ..utils.preprocessing import get_transform, preprocess_for_inference
 from PIL import Image
 import torch
 from flask import Flask, request, jsonify
